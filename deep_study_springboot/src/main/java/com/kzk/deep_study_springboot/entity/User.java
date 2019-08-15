@@ -1,6 +1,5 @@
 package com.kzk.deep_study_springboot.entity;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -19,7 +18,7 @@ public class User implements java.io.Serializable{
 
     @ManyToOne
     @JoinColumn(name="did")  //数据库字段did表示 id
-    @JsonBackReference   //防止关系对象的递归回调
+//    @JsonBackReference   //防止关系对象的递归回调
     private Department department;
 
     @ManyToMany  //中间表
